@@ -19,9 +19,9 @@ namespace CS321_W4D1_BookAPI.ApiModels
                 OriginalLanguage = book.OriginalLanguage,
                 PublicationYear = book.PublicationYear,
                 PublisherId = book.PublisherId,
-                Publisher = book.Publisher != null
-                    ? book.Publisher.Name + ", " + book.Publisher.HeadQuartersLocation
-                    : null,
+                Publisher = book.Publisher == null ?
+                    null
+                    : book.Publisher.Name + ", " + book.Publisher.HeadQuartersLocation ,
                 AuthorId = book.AuthorId,
                 Author = book.Author != null
                     ? book.Author.LastName + ", " + book.Author.FirstName
@@ -34,6 +34,15 @@ namespace CS321_W4D1_BookAPI.ApiModels
             // TODO: map the BookModel to a Book domain object
             return new Book
             {
+                Id = bookModel.Id,
+                Title = bookModel.Title,
+                Genre = bookModel.Genre,
+                OriginalLanguage = bookModel.OriginalLanguage,
+                PublicationYear = bookModel.PublicationYear,
+                PublisherId = bookModel.PublisherId,
+                AuthorId = bookModel.AuthorId,
+                // Note that we don't set the Publisher or Author object properties. 
+                // Setting the PublisherId and AuthorId fields is enough.
             };
         }
 
