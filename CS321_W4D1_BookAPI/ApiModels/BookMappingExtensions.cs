@@ -13,6 +13,19 @@ namespace CS321_W4D1_BookAPI.ApiModels
             // TODO: map the Book domain object to a BookModel
             return new BookModel
             {
+                Id = book.Id,
+                Title = book.Title,
+                Genre = book.Genre,
+                OriginalLanguage = book.OriginalLanguage,
+                PublicationYear = book.PublicationYear,
+                PublisherId = book.PublisherId,
+                Publisher = book.Publisher != null
+                    ? book.Publisher.Name + ", " + book.Publisher.HeadQuartersLocation
+                    : null,
+                AuthorId = book.AuthorId,
+                Author = book.Author != null
+                    ? book.Author.LastName + ", " + book.Author.FirstName
+                    : null
             };
         }
 
