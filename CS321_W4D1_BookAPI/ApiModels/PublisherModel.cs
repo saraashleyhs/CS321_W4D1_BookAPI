@@ -12,7 +12,7 @@ namespace CS321_W4D1_BookAPI.ApiModels
         public int FoundedYear { get; set; }
         public string CountryOfOrigin { get; set; }
         public string HeadQuartersLocation { get; set; }
-        public ICollection<BookModel> Books { get; set; }
+        public ICollection<PublisherModel> PublisherModels { get; set; }
 
     }
 }
