@@ -40,7 +40,7 @@ namespace CS321_W4D1_BookAPI.Services
         public Author Update(Author updatedAuthor)
         {
             // get the ToDo object in the current list with this id 
-            var currentAuthor = _bookContext.Authors.Find(updatedAuthor.Id);
+            Author currentAuthor = _bookContext.Authors.Find(updatedAuthor.Id);
 
             // return null if todo to update isn't found
             if (currentAuthor == null) return null;
