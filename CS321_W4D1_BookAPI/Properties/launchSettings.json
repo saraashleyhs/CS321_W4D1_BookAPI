@@ -17,14 +17,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CS321_W2D1_ToDoAPI": {
+    "CS321_W4D1_BookAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/books",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }
