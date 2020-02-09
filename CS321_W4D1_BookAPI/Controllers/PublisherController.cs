@@ -13,6 +13,7 @@ namespace CS321_W4D1_BookAPI.Controllers
     public class PublisherController : ControllerBase
     {
         private readonly IPublisherService _publisherService;
+
         public PublisherController(IPublisherService publisherService)
         {
             _publisherService = publisherService;

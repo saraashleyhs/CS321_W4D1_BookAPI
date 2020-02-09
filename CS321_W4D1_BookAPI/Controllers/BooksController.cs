@@ -72,7 +72,7 @@ namespace CS321_W4D1_BookAPI.Controllers
 
         // PUT api/books/:id
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] BookModel updatedBook)
+        public IActionResult Put([FromBody] BookModel updatedBook)
         {
             Models.Book book = _bookService.Update(updatedBook.ToDomainModel());
             if (book == null) return NotFound();
